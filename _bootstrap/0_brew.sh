@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
-# 
-# Ensures that homebrew is installed and up to date.
-# https://brew.sh/
 set -e
 
 if ! type brew >/dev/null; then
