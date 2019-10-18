@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# Ensure that all scripts run relative to the _bootstrap dir.
-cd ~/.local/share/chezmoi/_bootstrap
+# Ensure that all scripts run relative to the .bootstrap dir.
+cd ~/.local/share/chezmoi/.bootstrap
 
 echo
 echo -e "\033[2mbootstrapping…\033[0m"
