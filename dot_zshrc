@@ -1,4 +1,25 @@
+#!/usr/bin/env zsh
+
+# https://github.com/zdharma/zplugin
 source ~/.zplugin/bin/zplugin.zsh
+
+# https://github.com/zsh-users/zsh-syntax-highlighting
+zplugin load zsh-users/zsh-syntax-highlighting
+
+# https://github.com/zsh-users/zsh-history-substring-search
+zplugin load zsh-users/zsh-history-substring-search
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+HISTORY_SUBSTRING_SEARCH_FUZZY='yes'
+
+# History
+HISTFILE=~/.zhistory
+HISTSIZE=10000
+SAVEHIST=10000
+setopt hist_expire_dups_first
+setopt hist_ignore_dups
+setopt hist_ignore_space
+setopt share_history
 
 # Load completions
 autoload -Uz compinit
