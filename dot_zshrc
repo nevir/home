@@ -1,0 +1,5 @@
+source ~/.zplugin/bin/zplugin.zsh
+
+# Load completions
+autoload -Uz compinit
+compinit
