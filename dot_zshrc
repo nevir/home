@@ -3,33 +3,9 @@
 # https://github.com/zdharma/zplugin
 source ~/.zplugin/bin/zplugin.zsh
 
-# History
-HISTFILE=~/.zhistory
-HISTSIZE=10000
-SAVEHIST=10000
-setopt hist_expire_dups_first
-setopt hist_ignore_dups
-setopt hist_ignore_space
-setopt share_history
-
-# https://github.com/nevir/novash
-zplugin ice pick"zsh-theme/novash.zsh-theme"
-zplugin load nevir/novash
-
-# https://github.com/zsh-users/zsh-syntax-highlighting
-zplugin load zsh-users/zsh-syntax-highlighting
-
-# https://github.com/zsh-users/zsh-history-substring-search
-zplugin load zsh-users/zsh-history-substring-search
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
-HISTORY_SUBSTRING_SEARCH_FUZZY='yes'
-
-# https://github.com/lukechilds/zsh-nvm
-export NVM_AUTO_USE=true
-export NVM_LAZY_LOAD=true
-zplugin ice wait silent
-zplugin load lukechilds/zsh-nvm
+for config in ~/.zshrc.d/plugins/*.sh; do
+  source $config
+done
 
 # Load completions
 autoload -Uz compinit
