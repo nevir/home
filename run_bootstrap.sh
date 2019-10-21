@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+if [[ "${SKIP_BOOTSTRAP}" != "" ]]; then exit 0; fi
+
 # Ensure that all scripts run relative to the .bootstrap dir.
 cd ~/.local/share/chezmoi/.bootstrap
 
