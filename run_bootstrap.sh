@@ -9,7 +9,7 @@ echo
 echo -e "\033[2mbootstrapping…\033[0m"
 
 for script in $(ls ./*.sh); do
-  [[ "${script}" =~ _(.+)\.sh$ ]] && name="${BASH_REMATCH[1]}"
+  [[ "$(basename "${script}")" =~ ^[0-9]+-(.+).sh$ ]] && name="${BASH_REMATCH[1]}"
   echo -en "… ${name}\r"
 
   output="$("${script}" 2>&1)"
