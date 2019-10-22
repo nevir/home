@@ -18,10 +18,9 @@ for script in $(ls ./*.sh); do
   if (( status == 0 )); then
     echo -e "\033[32m✓\033[0m ${name}"
   else
-    echo
-    echo -e "\033[31m✗\033[0m ${name}"
+    echo -e "\033[31m✗\033[0m ${name} ⬇"
     echo "${output}"
-    echo -e "\033[31m✗\033[0m ${name}"
+    echo -e "\033[31m✗\033[0m ${name} ⬆"
     echo
   fi
 done
