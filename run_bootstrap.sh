@@ -5,14 +5,13 @@ if [[ "${SKIP_BOOTSTRAP}" != "" ]]; then exit 0; fi
 # Ensure that all scripts run relative to the .bootstrap dir.
 cd ~/.local/share/chezmoi/.bootstrap
 
-echo
-echo -e "\033[2mbootstrapping…\033[0m"
+run_script() {
+  name="${1}"
+  command="${@:2}"
 
-for script in $(ls ./*.sh); do
-  [[ "$(basename "${script}")" =~ ^[0-9]+-(.+).sh$ ]] && name="${BASH_REMATCH[1]}"
   echo -en "… ${name}\r"
 
-  output="$("${script}" 2>&1)"
+  output="$(bash -c "${command[@]}" 2>&1)"
   status=$?
 
   if (( status == 0 )); then
@@ -21,8 +20,22 @@ for script in $(ls ./*.sh); do
     echo -e "\033[31m✗\033[0m ${name} ⬇"
     echo "${output}"
     echo -e "\033[31m✗\033[0m ${name} ⬆"
-    echo
   fi
+}
+
+echo
+echo -e "\033[2mbootstrapping…\033[0m"
+
+for script in $(ls ./*.sh); do
+  [[ "$(basename "${script}")" =~ ^[0-9]+-(.+).sh$ ]] && name="${BASH_REMATCH[1]}"
+  run_script "${name}" "${script}"
+done
+
+for plugin in $(ls ~/.local/share/chezmoi/dot_zshrc.d/plugins/*.sh); do
+  bootstrap=$(sed -n '/<<chezmoi_bootstrap/,/chezmoi_bootstrap/{//!p;}' "${plugin}")
+  if [[ -z "${bootstrap}" ]]; then continue; fi
+
+  run_script "zsh: $(basename ${plugin%.*})" eval "source ./util/*.sh;" "${bootstrap}"
 done
 
 echo -e "\033[2m…bootstrapping complete\033[0m"
