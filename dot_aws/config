@@ -1,0 +1,10 @@
+[okta]
+aws_saml_url = home/amazon_aws/0oao4s55cEsnZgTDp2p6/272
+
+[profile prod-ro]
+role_arn = arn:aws:iam::699536110035:role/DeveloperRO
+region = us-west-2
+
+[profile prod-rw]
+source_profile = prod-ro
+role_arn = arn:aws:iam::699536110035:role/DeveloperRW
