@@ -2,8 +2,8 @@
   brew_ensure_latest aws-okta
 chezmoi_bootstrap
 
-AWS_OKTA_MFA_PROVIDER="FIDO"
-AWS_OKTA_MFA_FACTOR_TYPE="u2f"
+AWS_OKTA_MFA_PROVIDER="OKTA"
+AWS_OKTA_MFA_FACTOR_TYPE="push"
 AWS_OKTA_DEFAULT_PROFILE="prod-ro"
 
 # Strawman for a `convoy` command to help with ops and the like.
@@ -64,6 +64,3 @@ convoy-ensure-okta-configured() {
     --mfa-provider "${AWS_OKTA_MFA_PROVIDER}" \
     --mfa-factor-type "${AWS_OKTA_MFA_FACTOR_TYPE}"
 }
-
-# Make sure that we have a valid AWS session on terminal init
-convoy-login
