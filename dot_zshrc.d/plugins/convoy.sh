@@ -40,6 +40,9 @@ convoy-login() {
   source <(aws-okta env "${profile}" \
     --mfa-provider "${AWS_OKTA_MFA_PROVIDER}" \
     --mfa-factor-type "${AWS_OKTA_MFA_FACTOR_TYPE}")
+  
+  # And log into ECR
+  $(aws ecr get-login --no-include-email)
 }
 
 convoy-console() {
