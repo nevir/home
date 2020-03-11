@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 if [[ "${SKIP_BOOTSTRAP}" != "" ]]; then exit 0; fi
 
