@@ -1,3 +1,3 @@
 # https://github.com/zsh-users/zsh-syntax-highlighting
-zplugin ice wait lucid
-zplugin load zsh-users/zsh-syntax-highlighting
+zinit ice wait lucid
+zinit load zsh-users/zsh-syntax-highlighting

@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
-# https://github.com/zdharma/zplugin
-source ~/.zplugin/bin/zplugin.zsh
+# https://github.com/zdharma/zinit
+source ~/.zinit/bin/zinit.zsh
 
 for config in ~/.zshrc.d/plugins/*.sh; do
   source $config

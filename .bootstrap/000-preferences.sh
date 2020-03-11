@@ -5,6 +5,6 @@ set -e
 # https://github.com/mathiasbynens/dotfiles/blob/master/.macos
 # https://github.com/keith/dotfiles/blob/master/osx/defaults.sh
 
-for script in $(ls ./.bootstrap/*.sh); do
-  source ./.bootstrap/"${script}"
+for script in $(ls ./preferences/*.sh); do
+  zsh "${script}"
 done

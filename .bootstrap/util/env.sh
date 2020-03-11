@@ -1,5 +1,3 @@
-__dirname=$(dirname $BASH_SOURCE)
-
 is_command() {
   command="${1}"
 

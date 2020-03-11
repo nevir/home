@@ -8,8 +8,8 @@ setopt hist_ignore_space
 setopt share_history
 
 # https://github.com/zsh-users/zsh-history-substring-search
-zplugin ice wait lucid
-zplugin load zsh-users/zsh-history-substring-search
+zinit ice wait lucid
+zinit load zsh-users/zsh-history-substring-search
 
 export HISTORY_SUBSTRING_SEARCH_FUZZY=yes
 

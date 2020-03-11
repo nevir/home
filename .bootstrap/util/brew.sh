@@ -1,5 +1,3 @@
-__dirname=$(dirname $BASH_SOURCE)
-
 brew_ensure_latest() {
   local formula="${1}"
   local args=("${@}")

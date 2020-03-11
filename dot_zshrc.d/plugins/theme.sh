@@ -1,3 +1,3 @@
 # https://github.com/nevir/novash
-zplugin ice pick"zsh-theme/novash.zsh-theme"
-zplugin load nevir/novash
+zinit ice pick"zsh-theme/novash.zsh-theme"
+zinit load nevir/novash

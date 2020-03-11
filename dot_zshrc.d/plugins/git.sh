@@ -3,7 +3,7 @@
 chezmoi_bootstrap
 
 # https://github.com/knu/zsh-git-escape-magic
-zplugin snippet https://raw.githubusercontent.com/knu/zsh-git-escape-magic/master/git-escape-magic
+zinit snippet https://raw.githubusercontent.com/knu/zsh-git-escape-magic/master/git-escape-magic
 
 # https://github.com/github/hub
 alias git=hub
