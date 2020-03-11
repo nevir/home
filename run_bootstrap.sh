@@ -22,8 +22,6 @@ run_script() {
 echo
 echo -e "\033[2mbootstrapping…\033[0m"
 
-sudo echo 
-
 for script in $(ls ./*.sh); do
   local name="${script:6:-3}"
   run_script "${name}" zsh "${script}"
