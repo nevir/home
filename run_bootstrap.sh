@@ -26,6 +26,8 @@ run_script() {
 echo
 echo -e "\033[2mbootstrapping…\033[0m"
 
+sudo echo 
+
 for script in $(ls ./*.sh); do
   [[ "$(basename "${script}")" =~ ^[0-9]+-(.+).sh$ ]] && name="${BASH_REMATCH[1]}"
   run_script "${name}" "${script}"
