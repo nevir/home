@@ -14,9 +14,9 @@ brew_cask_ensure_latest() {
   local args=("${@}")
   
   if ! brew_is_installed "${formula}" cask; then
-    brew cask install "${args[@]}"
+    brew cask install --no-quarantine "${args[@]}"
   elif ! brew_is_latest "${formula}" cask; then
-    brew cask upgrade "${args[@]}"
+    brew cask upgrade --no-quarantine "${args[@]}"
   fi
 }
 

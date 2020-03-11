@@ -2,6 +2,7 @@
 set -e
 source ./util/brew.sh
 
+brew_cask_ensure_latest 1password
 brew_cask_ensure_latest google-chrome
 brew_cask_ensure_latest iterm2
 brew_cask_ensure_latest slack
