@@ -1,8 +1,10 @@
 #!/usr/bin/env zsh
 if [[ "${SKIP_BOOTSTRAP}" != "" ]]; then exit 0; fi
 
+export CHEZMOI_ROOT="$(pwd)/.local/share/chezmoi"
+
 # Ensure that all scripts run relative to the .bootstrap dir.
-cd ~/.local/share/chezmoi/.bootstrap
+cd "${CHEZMOI_ROOT}"/.bootstrap
 
 run_script() {
   local name="${1}"
