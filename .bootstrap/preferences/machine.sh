@@ -8,9 +8,6 @@ fi
 if [[ "$(scutil --get LocalHostName)" != "$USERNAME" ]]; then
   sudo scutil --set LocalHostName "$USERNAME"
 fi
-if [[ "$(defaults read /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName)" != "$USERNAME" ]]; then
-  sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$USERNAME"
-fi
 
 # Trackpad
 
