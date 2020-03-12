@@ -4,5 +4,10 @@
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
-  "explorer.openEditors.visible": 0
+  "explorer.openEditors.visible": 0,
+  "workbench.startupEditor": "newUntitledFile",
+  "eslint.lintTask.enable": true,
+  "eslint.packageManager": "yarn",
+  "explorer.confirmDragAndDrop": false,
+  "typescript.updateImportsOnFileMove.enabled": "always"
 }
