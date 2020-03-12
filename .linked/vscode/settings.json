@@ -1,0 +1,8 @@
+{
+  "editor.fontFamily": "Fira Mono for Powerline",
+  "editor.tabSize": 2,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "explorer.openEditors.visible": 0
+}
