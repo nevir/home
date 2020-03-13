@@ -1,1 +1,0 @@
-brew_cask_ensure_latest 1password

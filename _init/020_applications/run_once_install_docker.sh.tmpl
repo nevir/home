@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+source "{{ $.chezmoi.sourceDir }}"/.util/index.sh
+
+initially_installed=$(brew_is_installed docker || echo 0)
+cask_install docker
+
+if ! (( initially_installed )); then
+  # Gotta give it permissions if this is our first run.
+  open -a Docker
+fi

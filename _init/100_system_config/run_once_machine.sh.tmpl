@@ -1,0 +1,7 @@
+#!/usr/bin/env zsh
+source "{{ $.chezmoi.sourceDir }}"/.util/index.sh
+
+# Machine Name
+sudo scutil --set ComputerName "{{ $.username }}"
+sudo scutil --set HostName "{{ $.username }}"
+sudo scutil --set LocalHostName "{{ $.username }}"

@@ -1,22 +1,18 @@
-brew_ensure_latest() {
+brew_install() {
   local formula="${1}"
   local args=("${@}")
-  
+
   if ! brew_is_installed "${formula}"; then
     brew install "${args[@]}"
-  elif ! brew_is_latest "${formula}"; then
-    brew upgrade "${args[@]}"
   fi
 }
 
-brew_cask_ensure_latest() {
+cask_install() {
   local formula="${1}"
   local args=("${@}")
-  
+
   if ! brew_is_installed "${formula}" cask; then
     brew cask install --no-quarantine "${args[@]}"
-  elif ! brew_is_latest "${formula}" cask; then
-    brew cask upgrade --no-quarantine "${args[@]}"
   fi
 }
 

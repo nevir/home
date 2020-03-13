@@ -1,15 +1,5 @@
-# Machine Name
-if [[ "$(scutil --get ComputerName)" != "$USERNAME" ]]; then
-  sudo scutil --set ComputerName "$USERNAME"
-fi
-if [[ "$(scutil --get HostName)" != "$USERNAME" ]]; then
-  sudo scutil --set HostName "$USERNAME"
-fi
-if [[ "$(scutil --get LocalHostName)" != "$USERNAME" ]]; then
-  sudo scutil --set LocalHostName "$USERNAME"
-fi
-
-# Trackpad
+#!/usr/bin/env zsh
+source "{{ $.chezmoi.sourceDir }}"/.util/index.sh
 
 # Tap to click
 defaults write com.apple.AppleMultitouchTrackpad Clicking -int 1
