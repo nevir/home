@@ -10,5 +10,6 @@
   "eslint.packageManager": "yarn",
   "explorer.confirmDragAndDrop": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "explorer.confirmDelete": false
+  "explorer.confirmDelete": false,
+  "editor.minimap.enabled": false
 }
