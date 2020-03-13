@@ -1,6 +1,0 @@
-[user]
-  name = Ian MacLeod
-  email = ian@nevir.net
-
-[credential]
-  helper = osxkeychain
