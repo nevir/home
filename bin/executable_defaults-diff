@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+
+cd $(mktemp -d)
+
+defaults read > before
+read -s -k $'?Edit your preferences…'
+defaults read > after
+echo
+
+diff -U10 before after

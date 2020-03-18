@@ -1,6 +1,0 @@
-INSTALL_PATH="/Applications/Visual Studio Code.app"
-ELECTRON="$INSTALL_PATH/Contents/MacOS/Electron"
-CLI="$INSTALL_PATH/Contents/Resources/app/out/cli.js"
-
-ELECTRON_RUN_AS_NODE=1 "$ELECTRON" "$CLI" "$@"
-exit $?
