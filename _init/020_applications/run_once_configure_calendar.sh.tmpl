@@ -1,0 +1,5 @@
+#!/usr/bin/env zsh
+source "{{ $.chezmoi.sourceDir }}"/.util/index.sh
+
+defaults write com.apple.iCal InvitationNotificationsDisabled -int 1
+defaults write com.apple.iCal TimeToLeaveEnabled -int 0
