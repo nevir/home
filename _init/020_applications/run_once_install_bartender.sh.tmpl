@@ -8,5 +8,7 @@ if [[ ! -d "${TARGET}" ]]; then
   curl https://www.macbartender.com/Demo/Bartender%203.zip > bartender.zip
   unzip bartender.zip
   sudo mv *.app /Applications
-  open "${TARGET}"
 fi
+
+loginitems -a "Bartender 3" -s false
+open "${TARGET}"
