@@ -1,0 +1,12 @@
+#!/usr/bin/env zsh
+source "{{ $.chezmoi.sourceDir }}"/.util/index.sh
+
+TARGET="/Applications/Bartender 3.app"
+
+if [[ ! -d "${TARGET}" ]]; then
+  cd $(mktemp -d)
+  curl https://www.macbartender.com/Demo/Bartender%203.zip > bartender.zip
+  unzip bartender.zip
+  sudo mv *.app /Applications
+  open "${TARGET}"
+fi
