@@ -1,5 +1,19 @@
 #!/usr/bin/env zsh
 source "{{ $.chezmoi.sourceDir }}"/.util/index.sh
 
+defaults write com.apple.finder FinderSpawnTab -int 0
+defaults write com.apple.finder FXEnableExtensionChangeWarning -int 0
+defaults write com.apple.finder FXEnableRemoveFromICloudDriveWarning -int 0
+defaults write com.apple.finder FXRemoveOldTrashItems -int 0
 defaults write com.apple.finder NewWindowTarget -string PfHm
 defaults write com.apple.finder NewWindowTargetPath -string "file:///Users/ianm/"
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -int 0
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -int 0
+defaults write com.apple.finder WarnOnEmptyTrash -int 0
+defaults write com.apple.finder FXDefaultSearchScope -string SCcf
+defaults write com.apple.finder SearchRecentsSavedViewStyle -string clmv
+defaults write com.apple.finder SearchRecentsViewSettings.IconViewSettings.arrangeBy -string name
+
+defaults write NSGlobalDomain AppleShowAllExtensions -int 1
+
+killall Finder
