@@ -1,0 +1,5 @@
+#!/usr/bin/env zsh
+source "{{ $.chezmoi.sourceDir }}"/.util/index.sh
+
+cask_install google-backup-and-sync
+open -a 'Backup and Sync'
