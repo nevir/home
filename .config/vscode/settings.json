@@ -11,5 +11,6 @@
   "explorer.confirmDragAndDrop": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "explorer.confirmDelete": false,
-  "editor.minimap.enabled": false
+  "editor.minimap.enabled": false,
+  "go.useLanguageServer": true
 }

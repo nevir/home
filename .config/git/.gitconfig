@@ -2,7 +2,7 @@
   path = ~/.personal.gitconfig
 
 [credential]
-  helper = osxkeychain
+	helper = osxkeychain
 
 [alias]
   co = checkout
