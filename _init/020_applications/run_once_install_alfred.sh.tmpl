@@ -1,0 +1,5 @@
+#!/usr/bin/env zsh
+source "{{ $.chezmoi.sourceDir }}"/.util/index.sh
+
+cask_install alfred
+open -a "Alfred 4"

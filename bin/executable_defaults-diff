@@ -8,3 +8,5 @@ defaults read > after
 echo
 
 diff -U10 before after
+
+echo $(pwd)/after
