@@ -3,6 +3,10 @@
   brew_ensure_latest aws-okta
 chezmoi_bootstrap
 
+if [[ -f ~/.convoyrc ]]; then
+  source ~/.convoyrc
+fi
+
 AWS_OKTA_MFA_PROVIDER="OKTA"
 AWS_OKTA_MFA_FACTOR_TYPE="push"
 AWS_OKTA_DEFAULT_PROFILE="prod-ro"
