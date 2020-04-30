@@ -1,4 +1,5 @@
 <<chezmoi_bootstrap >/dev/null
+  brew_ensure_latest aws-cli@1
   brew_ensure_latest aws-okta
 chezmoi_bootstrap
 
@@ -35,12 +36,12 @@ convoy-login() {
   aws-okta write-to-credentials "${profile}" ~/.aws/credentials \
     --mfa-provider "${AWS_OKTA_MFA_PROVIDER}" \
     --mfa-factor-type "${AWS_OKTA_MFA_FACTOR_TYPE}"
-  
+
   # …and set up the environment for CLI use.
   source <(aws-okta env "${profile}" \
     --mfa-provider "${AWS_OKTA_MFA_PROVIDER}" \
     --mfa-factor-type "${AWS_OKTA_MFA_FACTOR_TYPE}")
-  
+
   # And log into ECR
   $(aws ecr get-login --no-include-email)
 }
