@@ -1,0 +1,5 @@
+[user]
+	name = Ian MacLeod
+	email = {{ email }}
+[init]
+	defaultBranch = main

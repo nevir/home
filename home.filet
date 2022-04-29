@@ -1,0 +1,29 @@
+import github:dotfilet/applications
+import github:dotfilet/developer
+import github:dotfilet/providers
+import github:dotfilet/shell
+import github:dotfilet/utilities
+
+import ./personal
+
+# System
+
+use homebrew
+
+# Shell
+
+use zinit
+
+# Developer
+
+use git
+use volta
+
+# Applications
+
+use 1password
+1pass_login ian@nevir.net
+
+use chrome
+
+use vscode
