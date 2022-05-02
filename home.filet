@@ -13,6 +13,7 @@ use homebrew
 # Shell
 
 use zinit
+zsh_prepend_path '~/bin'
 
 # Developer
 
