@@ -1,0 +1,4 @@
+use zinit
+copy ~/.zshrc.d
+
+zsh_prepend_path '~/bin'

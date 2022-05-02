@@ -4,20 +4,17 @@ import github:dotfilet/providers
 import github:dotfilet/shell
 import github:dotfilet/utilities
 
-import ./personal
-
 # System
 
 use homebrew
 
 # Shell
 
-use zinit
-zsh_prepend_path '~/bin'
+use ./personal/shell
 
 # Developer
 
-use git
+use ./personal/git
 use volta
 
 # Applications
