@@ -15,6 +15,7 @@ use ./personal/shell
 # Developer
 
 use ./personal/git
+
 use volta
 
 # Applications
@@ -22,6 +23,12 @@ use volta
 use 1password
 1pass_login ian@nevir.net
 
+use iterm2
+
 use chrome
 
 use vscode
+
+# Configuration
+
+use ./personal/theme

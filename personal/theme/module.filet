@@ -1,0 +1,5 @@
+# https://www.nordtheme.com/
+
+# VS Code
+vscode_extension arcticicestudio.nord-visual-studio-code
+merge_json ~/"Library/Application Support/Code/User/settings.json" ./vscode/settings.json
