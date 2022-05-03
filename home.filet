@@ -23,8 +23,7 @@ use volta
 use 1password
 1pass_login ian@nevir.net
 
-use iterm2
-iterm2_pulldown_window
+use ./personal/terminal
 
 use chrome
 

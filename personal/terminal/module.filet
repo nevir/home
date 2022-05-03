@@ -1,0 +1,10 @@
+use iterm2
+
+iterm2_pulldown_window
+
+plist_set "${ITERM2_PREFERENCES}" \
+  bool OpenNoWindowsAtStartup  true \
+  bool PromptOnQuitEvenIfThereAreNoWindows true \
+  bool HideFromDockAndAppSwitcher true \
+  bool UIElementRequiresHotkeys true \
+  bool "New Bookmarks.0.Unlimited Scrollback" true

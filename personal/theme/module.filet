@@ -16,4 +16,10 @@ iterm2_profile_settings all \
   real   "Transparency"         0.15
 
 plist_set "${ITERM2_PREFERENCES}" \
-  integer TabStyleWithAutomaticOption 5
+  integer TabStyleWithAutomaticOption 5 \
+  bool    WindowNumber false \
+  bool    DimBackgroundWindows true \
+  bool    DimInactiveSplitPanes true \
+  bool    DimOnlyText true \
+  bool    HideTabNumber true \
+  real    SplitPaneDimmingAmount 0.20
