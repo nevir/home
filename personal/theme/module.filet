@@ -3,3 +3,18 @@
 # VS Code
 vscode_extension arcticicestudio.nord-visual-studio-code
 merge_json ~/"Library/Application Support/Code/User/settings.json" ./vscode/settings.json
+
+# iTerm 2
+ITERM2_PLIST=~/Library/Preferences/com.googlecode.iterm2.plist
+THEME_PLIST="${FILET_CURRENT_MODULE_ROOT}"/iterm2/nord.plist
+
+staging=$(mktemp -d)
+cd "${staging}"
+/usr/libexec/PlistBuddy -x -c "Print :'New Bookmarks':0" "${ITERM2_PLIST}" > ./existing.plist
+cp "${THEME_PLIST}" ./merged.plist
+/usr/libexec/PlistBuddy -x -c "Merge ./existing.plist" ./merged.plist > /dev/null
+/usr/libexec/PlistBuddy -c "Delete :'New Bookmarks':0" "${ITERM2_PLIST}"
+/usr/libexec/PlistBuddy -c "Add :'New Bookmarks':0 dict" "${ITERM2_PLIST}"
+/usr/libexec/PlistBuddy -c "Merge ./merged.plist :'New Bookmarks':0" "${ITERM2_PLIST}"
+cd -
+rm -rf "${staging}"
