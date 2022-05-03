@@ -1,0 +1,5 @@
+use json
+
+use vscode
+
+merge_json ~/"Library/Application Support/Code/User/settings.json" ./settings.json

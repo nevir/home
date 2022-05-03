@@ -27,7 +27,7 @@ use ./personal/terminal
 
 use chrome
 
-use vscode
+use ./personal/vscode
 
 # Configuration
 
