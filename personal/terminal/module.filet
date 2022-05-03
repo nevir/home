@@ -1,3 +1,4 @@
+use launch-items
 use iterm2
 
 iterm2_pulldown_window
@@ -8,3 +9,5 @@ plist_set "${ITERM2_PREFERENCES}" \
   bool HideFromDockAndAppSwitcher true \
   bool UIElementRequiresHotkeys true \
   bool "New Bookmarks.0.Unlimited Scrollback" true
+
+launch_item /Applications/iTerm.app
