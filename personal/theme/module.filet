@@ -1,5 +1,7 @@
 # https://www.nordtheme.com/
 
+brew_install font-fira-mono
+
 # VS Code
 vscode_extension arcticicestudio.nord-visual-studio-code
 merge_json ~/"Library/Application Support/Code/User/settings.json" ./vscode/settings.json
@@ -7,9 +9,11 @@ merge_json ~/"Library/Application Support/Code/User/settings.json" ./vscode/sett
 # iTerm 2
 iterm2_theme ./iterm2/nord.plist
 iterm2_profile_settings all \
-  bool "Blur"         true \
-  real "Blur Radius"  24 \
-  real "Transparency" 0.15
+  string "Normal Font"          "FiraMono-Regular 12" \
+  bool   "Show Mark Indicators" false \
+  bool   "Blur"                 true \
+  real   "Blur Radius"          24 \
+  real   "Transparency"         0.15
 
 plist_set "${ITERM2_PREFERENCES}" \
   integer TabStyleWithAutomaticOption 5
