@@ -1,0 +1,5 @@
+use json
+
+use 1password
+merge_json "${ONEPASSWORD_SETTINGS}" ./settings.json
+1pass_login ian@nevir.net

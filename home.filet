@@ -20,13 +20,14 @@ use touchid-sudo
 
 # Applications
 
-use 1password
-1pass_login ian@nevir.net
-use ./personal/terminal
 use chrome
+use ./personal/terminal
 use ./personal/vscode
+use ./personal/1password
 
 # Configuration
 
-use ./personal/theme
 use ./personal/dock
+use ./personal/menu-bar
+use ./personal/theme
+use ./personal/window-management
