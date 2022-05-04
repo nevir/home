@@ -18,6 +18,8 @@ use ./personal/git
 
 use volta
 
+use touchid-sudo
+
 # Applications
 
 use 1password
