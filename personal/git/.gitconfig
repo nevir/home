@@ -1,5 +1,12 @@
 [user]
-	name = Ian MacLeod
-	email = {{ email }}
+  name = Ian MacLeod
+  email = ian@nevir.net
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINhh5kafF8hynFU15jQw/Zlo6lN3nlzfsZzYY+uP8acS
 [init]
-	defaultBranch = main
+  defaultBranch = main
+[commit]
+  gpgsign = true
+[gpg]
+  format = ssh
+[url "ssh://git@github.com/"]
+  insteadOf = https://github.com/

@@ -1,2 +1,3 @@
-# TODO
-# template .gitconfig ~/.gitconfig "$(config_pairs git)"
+brew_install git
+
+copy ~/.gitconfig
