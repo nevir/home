@@ -8,8 +8,6 @@
   gpgsign = true
 [gpg]
   format = ssh
-[url "ssh://git@github.com/"]
-  insteadOf = https://github.com/
 [alias]
   amend = "commit --amend --reuse-message=HEAD"
   cleanup = "!f(){ git fetch && git branch --merged | grep -v '* ' | xargs git branch --delete; };f"
