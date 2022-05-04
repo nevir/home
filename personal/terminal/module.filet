@@ -4,10 +4,13 @@ use iterm2
 iterm2_pulldown_window
 
 plist_set "${ITERM2_PREFERENCES}" \
-  bool OpenNoWindowsAtStartup  true \
+  bool OpenNoWindowsAtStartup              true \
   bool PromptOnQuitEvenIfThereAreNoWindows true \
-  bool HideFromDockAndAppSwitcher true \
-  bool UIElementRequiresHotkeys true \
-  bool "New Bookmarks.0.Unlimited Scrollback" true
+  bool HideFromDockAndAppSwitcher          true \
+  bool StatusBarIcon                       false \
+  bool UIElementRequiresHotkeys            true \
+
+iterm2_profile_settings all \
+  bool "Unlimited Scrollback" true
 
 launch_item /Applications/iTerm.app
