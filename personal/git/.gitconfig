@@ -11,7 +11,9 @@
 [url "ssh://git@github.com/"]
   insteadOf = https://github.com/
 [alias]
-  co = checkout
-  ci = commit
-  st = status -s
-  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --no-merges
+  amend = "commit --amend --reuse-message=HEAD"
+  cleanup = "!f(){ git fetch && git branch --merged | grep -v '* ' | xargs git branch --delete; };f"
+  cm = "!f(){ git commit -m \"$*\"; };f"
+  co = "checkout"
+  lg = "log --graph --abbrev-commit --date=relative --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
+  st = "status -s"
