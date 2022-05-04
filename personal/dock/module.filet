@@ -1,0 +1,8 @@
+use plist
+
+plist_import ./persistent-apps.plist ~/Library/Preferences/com.apple.dock.plist persistent-apps 
+
+defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock show-recents -bool false
+
+killall Dock

@@ -15,22 +15,18 @@ use ./personal/shell
 # Developer
 
 use ./personal/git
-
 use volta
-
 use touchid-sudo
 
 # Applications
 
 use 1password
 1pass_login ian@nevir.net
-
 use ./personal/terminal
-
 use chrome
-
 use ./personal/vscode
 
 # Configuration
 
 use ./personal/theme
+use ./personal/dock
