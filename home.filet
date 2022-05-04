@@ -31,3 +31,6 @@ use ./personal/dock
 use ./personal/menu-bar
 use ./personal/theme
 use ./personal/window-management
+use ./personal/touchpad
+
+echo "Note: You may need to restart to pick up some changes."

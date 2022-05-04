@@ -1,0 +1,22 @@
+# NOTE: These require a restart to enable.
+
+# Disable force click (Look up & data detectors)
+defaults write -g com.apple.trackpad.forceClick -bool false
+
+# Enable tap to click
+defaults write -g com.apple.mouse.tapBehavior -int 1
+defaults -currentHost write -g com.apple.mouse.tapBehavior -int 1
+defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+
+# Disable notification center
+defaults write -g com.apple.trackpad.twoFingerFromRightEdgeSwipeGesture -int 0
+defaults -currentHost write -g com.apple.trackpad.twoFingerFromRightEdgeSwipeGesture -int 0
+defaults write com.apple.AppleMultitouchTrackpad TrackpadTwoFingerFromRightEdgeSwipeGesture -int 0
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadTwoFingerFromRightEdgeSwipeGesture -int 0
+
+# Disable page swipe
+defaults write -g AppleEnableSwipeNavigateWithScrolls -bool false
+
+# Disable Launchpad
+defaults write com.apple.dock showLaunchpadGestureEnabled -bool false
