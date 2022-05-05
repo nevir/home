@@ -21,6 +21,7 @@ use touchid-sudo
 # Applications
 
 use chrome
+use ./personal/alfred
 use ./personal/terminal
 use ./personal/vscode
 use ./personal/1password

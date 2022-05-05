@@ -1,0 +1,29 @@
+use homebrew
+use plist
+
+brew_install alfred
+
+mkdir -p ~/"Library/Application Support/Alfred"
+copy ~/"Library/Application Support/Alfred/Alfred.alfredpreferences" ./Alfred.alfredpreferences
+if [[ ! -f ~/"Library/Application Support/Alfred/license.TV60PW9MT2.plist" ]]; then
+  op document get "Alfred License" --output ~/"Library/Application Support/Alfred/license.TV60PW9MT2.plist"
+fi
+
+# Make sure to disable spotlight so that Alfred can take it over.
+plist_set ~/Library/Preferences/com.apple.symbolichotkeys.plist \
+  dict    "AppleSymbolicHotKeys.64" "()" \
+  bool    "AppleSymbolicHotKeys.64.enabled" false \
+  dict    "AppleSymbolicHotKeys.64.value" "()" \
+  array   "AppleSymbolicHotKeys.64.value.parameters" "()" \
+  integer "AppleSymbolicHotKeys.64.value.parameters.0" 65535 \
+  integer "AppleSymbolicHotKeys.64.value.parameters.1" 49 \
+  integer "AppleSymbolicHotKeys.64.value.parameters.2" 1572864 \
+  string  "AppleSymbolicHotKeys.64.value.type" "standard" \
+  dict    "AppleSymbolicHotKeys.65" "()" \
+  bool    "AppleSymbolicHotKeys.65.enabled" false \
+  dict    "AppleSymbolicHotKeys.65.value" "()" \
+  array   "AppleSymbolicHotKeys.65.value.parameters" "()" \
+  integer "AppleSymbolicHotKeys.65.value.parameters.0" 65535 \
+  integer "AppleSymbolicHotKeys.65.value.parameters.1" 49 \
+  integer "AppleSymbolicHotKeys.65.value.parameters.2" 1572864 \
+  string  "AppleSymbolicHotKeys.65.value.type" "standard"
