@@ -11,6 +11,7 @@ plist_set "${ITERM2_PREFERENCES}" \
   bool UIElementRequiresHotkeys            true \
 
 iterm2_profile_settings all \
-  bool "Unlimited Scrollback" true
+  bool "Unlimited Scrollback" true \
+  bool "Silence Bell"         true
 
 launch_item /Applications/iTerm.app

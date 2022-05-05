@@ -1,0 +1,5 @@
+# Disable default UI sounds
+defaults write -g com.apple.sound.uiaudio.enabled -bool false
+
+# Enable feedback on volume change
+defaults write -g com.apple.sound.beep.feedback -bool true

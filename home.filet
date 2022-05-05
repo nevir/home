@@ -30,8 +30,9 @@ use ./personal/1password
 
 use ./personal/dock
 use ./personal/menu-bar
+use ./personal/sound
 use ./personal/theme
-use ./personal/window-management
 use ./personal/touchpad
+use ./personal/window-management
 
 echo "Note: You may need to restart to pick up some changes."
