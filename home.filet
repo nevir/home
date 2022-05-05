@@ -30,6 +30,7 @@ use ./personal/1password
 # Configuration
 
 use ./personal/dock
+use ./personal/finder
 use ./personal/menu-bar
 use ./personal/sound
 use ./personal/theme
