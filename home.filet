@@ -4,9 +4,10 @@ import github:dotfilet/providers
 import github:dotfilet/shell
 import github:dotfilet/utilities
 
-# System
+# Core
 
 use homebrew
+use ./personal/1password
 
 # Shell
 
@@ -25,7 +26,6 @@ use google-drive
 use ./personal/alfred
 use ./personal/terminal
 use ./personal/vscode
-use ./personal/1password
 
 # Configuration
 
