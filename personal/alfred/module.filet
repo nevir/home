@@ -22,13 +22,16 @@ plist_set ~/Library/Preferences/com.apple.symbolichotkeys.plist \
   integer "AppleSymbolicHotKeys.65.value.parameters.2" 1572864 \
   string  "AppleSymbolicHotKeys.65.value.type" "standard"
 
+set +e
+killall -m Alfred > /dev/null 2>&1
+set -e
+
 mkdir -p ~/"Library/Application Support/Alfred"
-copy ~/"Library/Application Support/Alfred/Alfred.alfredpreferences" ./Alfred.alfredpreferences
+
 if [[ ! -f ~/"Library/Application Support/Alfred/license.TV60PW9MT2.plist" ]]; then
   op document get "Alfred License" --output ~/"Library/Application Support/Alfred/license.TV60PW9MT2.plist"
-
-  set +e
-  killall -m Alfred > /dev/null 2>&1
-  set -e
-  open /Applications/Alfred\ 4.app
 fi
+
+copy ~/"Library/Application Support/Alfred/Alfred.alfredpreferences" ./Alfred.alfredpreferences
+
+open /Applications/Alfred\ 4.app
