@@ -23,6 +23,7 @@ use touchid-sudo
 
 use chrome
 use google-drive
+use zoom
 use ./personal/alfred
 use ./personal/terminal
 use ./personal/vscode
