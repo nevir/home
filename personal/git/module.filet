@@ -1,4 +1,11 @@
 brew_install git
-use gh
 
 copy ~/.gitconfig
+
+use gh
+if ! gh auth status > /dev/null 2>&1; then
+  gh auth login \
+    --git-protocol https \
+    --hostname github.com \
+    --web
+fi
