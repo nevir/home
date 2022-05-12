@@ -1,3 +1,4 @@
 brew_install git
+use gh
 
 copy ~/.gitconfig
