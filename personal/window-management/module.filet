@@ -2,6 +2,13 @@ use rectangle
 
 defaults write com.knollsoft.Rectangle SUEnableAutomaticChecks -bool true
 defaults write com.knollsoft.Rectangle hideMenubarIcon -bool true
+# Cycle displays
+defaults write com.knollsoft.Rectangle subsequentExecutionMode -int 4
+# shortcuts
+defaults write com.knollsoft.Rectangle topHalf -dict
+defaults write com.knollsoft.Rectangle bottomHalf -dict
+defaults write com.knollsoft.Rectangle centerHalf -dict keyCode 126 modifierFlags 786432
+defaults write com.knollsoft.Rectangle centerThird -dict keyCode 125 modifierFlags 786432
 
 if ! pgrep Rectangle > /dev/null; then
   open /Applications/Rectangle.app
