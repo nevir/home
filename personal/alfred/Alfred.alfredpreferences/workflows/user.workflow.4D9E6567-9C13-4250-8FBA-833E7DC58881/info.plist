@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>net.nevir.email-task</string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>985B84FB-B81C-4A4E-9387-E4BEBBB28398</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>663916D8-CA3C-4674-B236-1C7B10F11E18</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>ian@nevir.net</string>
+	<key>description</key>
+	<string>Send a task email to the configured address</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Task Email</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>NL="
+"
+
+message="$@"
+
+subject="${message%%: *}"
+subject="${subject%%\"$NL\"*}"
+body="${message#*: }"
+
+/opt/homebrew/bin/sendemail \
+  -s "${server}:587" \
+  -o tls=yes \
+  -xu "${username}" \
+  -xp "${password}" \
+  -f "Task &lt;${from}&gt;" \
+  -t "${to}" \
+  -u "${subject}" \
+  -m "${body}"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>663916D8-CA3C-4674-B236-1C7B10F11E18</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>t</string>
+				<key>subtext</key>
+				<string>Create a task email in your inbox</string>
+				<key>text</key>
+				<string>Task</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>985B84FB-B81C-4A4E-9387-E4BEBBB28398</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>663916D8-CA3C-4674-B236-1C7B10F11E18</key>
+		<dict>
+			<key>xpos</key>
+			<integer>195</integer>
+			<key>ypos</key>
+			<integer>10</integer>
+		</dict>
+		<key>985B84FB-B81C-4A4E-9387-E4BEBBB28398</key>
+		<dict>
+			<key>xpos</key>
+			<integer>10</integer>
+			<key>ypos</key>
+			<integer>10</integer>
+		</dict>
+	</dict>
+	<key>variables</key>
+	<dict>
+		<key>from</key>
+		<string>ian@nevir.net</string>
+		<key>server</key>
+		<string>smtp.gmail.com</string>
+		<key>to</key>
+		<string>admin@nevir.net</string>
+		<key>username</key>
+		<string>admin@nevir.net</string>
+	</dict>
+	<key>version</key>
+	<string></string>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>

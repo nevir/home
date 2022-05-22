@@ -26,12 +26,19 @@ set +e
 killall -m Alfred > /dev/null 2>&1
 set -e
 
-mkdir -p ~/"Library/Application Support/Alfred"
+ALFRED_ROOT=~/"Library/Application Support/Alfred"
+ALFRED_PREFS="${ALFRED_ROOT}"/Alfred.alfredpreferences
+mkdir -p "${ALFRED_ROOT}"
 
-if [[ ! -f ~/"Library/Application Support/Alfred/license.TV60PW9MT2.plist" ]]; then
-  op document get "Alfred License" --output ~/"Library/Application Support/Alfred/license.TV60PW9MT2.plist"
+if [[ ! -f "${ALFRED_ROOT}"/license.TV60PW9MT2.plist ]]; then
+  op document get "Alfred License" --output "${ALFRED_ROOT}/license.TV60PW9MT2.plist"
 fi
 
-copy ~/"Library/Application Support/Alfred/Alfred.alfredpreferences" ./Alfred.alfredpreferences
+copy "${ALFRED_PREFS}" ./Alfred.alfredpreferences
+
+EMAIL_WORKFLOW="${ALFRED_PREFS}"/workflows/user.workflow.4D9E6567-9C13-4250-8FBA-833E7DC58881/info.plist
+if ! plist_has_key "${EMAIL_WORKFLOW}" variables.password; then
+  plist_set "${EMAIL_WORKFLOW}" string variables.password $(op item get "Email Task" --fields password)
+fi
 
 open /Applications/Alfred\ 4.app
