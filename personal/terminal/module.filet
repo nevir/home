@@ -1,7 +1,10 @@
 use launch-items
 use iterm2
 
-iterm2_pulldown_window
+iterm2_pulldown_window \
+  integer "Window Type" 9 \
+  integer "Rows" 20 \
+  integer "Columns" 160
 
 plist_set "${ITERM2_PREFERENCES}" \
   bool OpenNoWindowsAtStartup              true \

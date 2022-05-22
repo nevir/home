@@ -14,8 +14,13 @@ iterm2_profile_settings all \
   string "Normal Font"          "FiraMono-Regular 12" \
   bool   "Show Mark Indicators" false \
   bool   "Blur"                 true \
-  real   "Blur Radius"          24 \
-  real   "Transparency"         0.15
+  real   "Blur Radius"          24
+
+iterm2_profile_settings 0 \
+  real   "Transparency" 0.15
+
+iterm2_profile_settings 1 \
+  real   "Transparency" 0.3
 
 plist_set "${ITERM2_PREFERENCES}" \
   integer TabStyleWithAutomaticOption 5 \
