@@ -20,7 +20,7 @@ iterm2_profile_settings 0 \
   real   "Transparency" 0.15
 
 iterm2_profile_settings 1 \
-  real   "Transparency" 0.3
+  real   "Transparency" 0.15
 
 plist_set "${ITERM2_PREFERENCES}" \
   integer TabStyleWithAutomaticOption 5 \
