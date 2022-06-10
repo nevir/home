@@ -8,6 +8,7 @@ import github:dotfilet/utilities
 
 use homebrew
 use ./personal/1password
+use ./personal/browser
 
 # Shell
 
@@ -21,7 +22,6 @@ use touchid-sudo
 
 # Applications
 
-use chrome
 use google-drive
 use zoom
 use ./personal/alfred

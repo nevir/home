@@ -1,0 +1,3 @@
+use chrome
+
+chrome_as_default_browser
