@@ -8,3 +8,7 @@ defaults write com.apple.finder NewWindowTarget -string "PfHm"
 defaults write com.apple.finder NewWindowTargetPath -string "file:///Users/nevir/"
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
+
+# Disable Apple Music from launching when pressing the play key.
+launchctl stop com.apple.rcd
+launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
