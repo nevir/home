@@ -4,6 +4,8 @@
   signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINhh5kafF8hynFU15jQw/Zlo6lN3nlzfsZzYY+uP8acS
 [init]
   defaultBranch = main
+[pull]
+  rebase = true
 [commit]
   gpgsign = true
 [gpg]
