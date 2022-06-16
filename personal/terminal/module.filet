@@ -1,5 +1,6 @@
 use launch-items
 use iterm2
+use plist
 
 iterm2_pulldown_window \
   integer "Window Type" 9 \
@@ -18,3 +19,22 @@ iterm2_profile_settings all \
   bool "Silence Bell"         true
 
 launch_item /Applications/iTerm.app
+
+# Disable keyboard layout switching on ctrl-space
+plist_set ~/Library/Preferences/com.apple.symbolichotkeys.plist \
+  dict    "AppleSymbolicHotKeys.60" "()" \
+  bool    "AppleSymbolicHotKeys.60.enabled" false \
+  dict    "AppleSymbolicHotKeys.60.value" "()" \
+  array   "AppleSymbolicHotKeys.60.value.parameters" "()" \
+  integer "AppleSymbolicHotKeys.60.value.parameters.0" 32 \
+  integer "AppleSymbolicHotKeys.60.value.parameters.1" 49 \
+  integer "AppleSymbolicHotKeys.60.value.parameters.2" 262144 \
+  string  "AppleSymbolicHotKeys.60.value.type" "standard" \
+  dict    "AppleSymbolicHotKeys.61" "()" \
+  bool    "AppleSymbolicHotKeys.61.enabled" false \
+  dict    "AppleSymbolicHotKeys.61.value" "()" \
+  array   "AppleSymbolicHotKeys.61.value.parameters" "()" \
+  integer "AppleSymbolicHotKeys.61.value.parameters.0" 32 \
+  integer "AppleSymbolicHotKeys.61.value.parameters.1" 49 \
+  integer "AppleSymbolicHotKeys.61.value.parameters.2" 786432 \
+  string  "AppleSymbolicHotKeys.61.value.type" "standard"
