@@ -1,0 +1,1 @@
+sudo cp -R "${FILET_CURRENT_MODULE_ROOT}"/"Colemak DH.bundle" /Library/"Keyboard Layouts"/

@@ -9,6 +9,7 @@ import github:dotfilet/utilities
 use homebrew
 use ./personal/1password
 use ./personal/browser
+use ./personal/keyboard
 
 # Shell
 
