@@ -1,0 +1,5 @@
+use homebrew
+
+brew_install yubico-yubikey-manager
+
+use touchid-sudo

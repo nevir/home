@@ -10,6 +10,7 @@ use homebrew
 use ./personal/1password
 use ./personal/browser
 use ./personal/keyboard
+use ./personal/security
 
 # Shell
 
@@ -19,7 +20,6 @@ use ./personal/shell
 
 use ./personal/git
 use volta
-use touchid-sudo
 
 # Applications
 
