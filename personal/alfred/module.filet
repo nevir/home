@@ -1,26 +1,12 @@
 use homebrew
+use hotkeys
 use plist
 
-brew_install alfred
+# Disable the default spotlight hotkeys
+disable_hotkey 64 32 49 1048576
+disable_hotkey 65 65535 49 1572864
 
-# Make sure to disable spotlight so that Alfred can take it over.
-plist_set ~/Library/Preferences/com.apple.symbolichotkeys.plist \
-  dict    "AppleSymbolicHotKeys.64" "()" \
-  bool    "AppleSymbolicHotKeys.64.enabled" false \
-  dict    "AppleSymbolicHotKeys.64.value" "()" \
-  array   "AppleSymbolicHotKeys.64.value.parameters" "()" \
-  integer "AppleSymbolicHotKeys.64.value.parameters.0" 65535 \
-  integer "AppleSymbolicHotKeys.64.value.parameters.1" 49 \
-  integer "AppleSymbolicHotKeys.64.value.parameters.2" 1572864 \
-  string  "AppleSymbolicHotKeys.64.value.type" "standard" \
-  dict    "AppleSymbolicHotKeys.65" "()" \
-  bool    "AppleSymbolicHotKeys.65.enabled" false \
-  dict    "AppleSymbolicHotKeys.65.value" "()" \
-  array   "AppleSymbolicHotKeys.65.value.parameters" "()" \
-  integer "AppleSymbolicHotKeys.65.value.parameters.0" 65535 \
-  integer "AppleSymbolicHotKeys.65.value.parameters.1" 49 \
-  integer "AppleSymbolicHotKeys.65.value.parameters.2" 1572864 \
-  string  "AppleSymbolicHotKeys.65.value.type" "standard"
+brew_install alfred
 
 set +e
 killall -m Alfred > /dev/null 2>&1
