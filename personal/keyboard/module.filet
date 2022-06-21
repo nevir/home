@@ -1,1 +1,4 @@
 sudo cp -R "${FILET_CURRENT_MODULE_ROOT}"/"Colemak DH.bundle" /Library/"Keyboard Layouts"/
+
+# Use function keys
+defaults write NSGlobalDomain com.apple.keyboard.fnState -bool true
