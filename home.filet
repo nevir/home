@@ -19,7 +19,8 @@ use ./personal/shell
 # Developer
 
 use ./personal/git
-use volta
+use ./personal/node
+use ./personal/rust
 
 # Applications
 
