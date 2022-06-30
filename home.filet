@@ -29,6 +29,7 @@ use zoom
 use ./personal/alfred
 use ./personal/terminal
 use ./personal/vscode
+use ./personal/slack
 
 # Configuration
 
