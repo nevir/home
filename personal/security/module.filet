@@ -1,6 +1,6 @@
 use homebrew
 
-if [[ ! -f /usr/libexec/rosetta/rosetta ]]; then
+if ! pgrep -q oahd; then
   sudo softwareupdate --install-rosetta --agree-to-license
 fi
 
