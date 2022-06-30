@@ -1,5 +1,10 @@
 use homebrew
 
+if [[ ! -f /usr/libexec/rosetta/rosetta ]]; then
+  sudo softwareupdate --install-rosetta --agree-to-license
+fi
+
+brew_tap homebrew/cask-drivers
 brew_install yubico-yubikey-manager
 
 use touchid-sudo
