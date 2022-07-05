@@ -15,6 +15,7 @@
   cleanup = "!f(){ git fetch && git branch --merged | grep -v '* ' | xargs git branch --delete; };f"
   cm = "!f(){ git commit -m \"$*\"; };f"
   co = "checkout"
+  cp = "cherry-pick"
   lg = "log --graph --abbrev-commit --date=relative --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
   st = "status -s"
   pp = "!f(){ git pull; git push };f"
