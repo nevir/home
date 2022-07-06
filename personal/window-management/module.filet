@@ -1,4 +1,5 @@
 use rectangle
+use hotkeys
 
 defaults write com.knollsoft.Rectangle SUEnableAutomaticChecks -bool true
 defaults write com.knollsoft.Rectangle hideMenubarIcon -bool true
@@ -25,5 +26,10 @@ defaults write com.apple.dock mru-spaces -bool false
 
 # Don't switch spaces to find an open window for an app.
 defaults write -g AppleSpacesSwitchOnActivate -bool false
+
+# Application Windows
+disable_hotkey 32 65535 126 8650752
+# Mission Control
+disable_hotkey 33 65535 125 8650752
 
 killall Dock
