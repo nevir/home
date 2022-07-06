@@ -1,3 +1,8 @@
 use homebrew
+use zsh
 
 brew_install tableplus
+
+brew_install postgresql@13
+brew services restart postgresql@13 > /dev/null
+zsh_prepend_path /opt/homebrew/opt/postgresql@13/bin
