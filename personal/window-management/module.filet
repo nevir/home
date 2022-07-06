@@ -3,7 +3,7 @@ use rectangle
 defaults write com.knollsoft.Rectangle SUEnableAutomaticChecks -bool true
 defaults write com.knollsoft.Rectangle hideMenubarIcon -bool true
 # Cycle displays
-defaults write com.knollsoft.Rectangle subsequentExecutionMode -int 4
+defaults write com.knollsoft.Rectangle subsequentExecutionMode -int 0
 # shortcuts
 defaults write com.knollsoft.Rectangle topHalf -dict
 defaults write com.knollsoft.Rectangle bottomHalf -dict
