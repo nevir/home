@@ -1,4 +1,5 @@
 use homebrew
+use 1password
 
 if ! pgrep -q oahd; then
   sudo softwareupdate --install-rosetta --agree-to-license
@@ -8,3 +9,15 @@ brew_tap homebrew/cask-drivers
 brew_install yubico-yubikey-manager
 
 use touchid-sudo
+
+brew_install gpg
+GPG_KEY_ID=$(op item get --fields "key id" "GPG Key")
+if ! gpg --list-keys | grep "${GPG_KEY_ID}" > /dev/null; then
+  cd $(mktemp -d)
+
+  op document get --output key.gpg "GPG Key"
+  gpg --import-options restore --import key.gpg
+  rm key.gpg
+
+  cd -
+fi
