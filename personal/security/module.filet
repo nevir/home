@@ -10,15 +10,20 @@ brew_install yubico-yubikey-manager
 
 use touchid-sudo
 
+# https://github.com/YubicoLabs/sign-git-commits-yubikey
 brew_install gpg
-GPG_KEY_ID=$(op item get --fields "key id" "GPG Key")
-if ! gpg --list-keys | grep "${GPG_KEY_ID}" > /dev/null; then
+copy ~/.gnupg
+copy ~/.zshrc.d
+
+GPG_KEY_FINGERPRINT=$(op item get --fields "fingerprint" "GPG Key: ${IDENTITY}")
+if ! gpg --list-keys | grep "${GPG_KEY_FINGERPRINT}" > /dev/null; then
   cd $(mktemp -d)
 
-  op document get --output key.gpg "GPG Key"
+  op document get --output key.gpg "GPG Key: ${IDENTITY}"
   gpg --import-options restore --import key.gpg
-  echo "${GPG_KEY_ID}:6:" | gpg --import-ownertrust
   rm key.gpg
+
+  echo "${GPG_KEY_FINGERPRINT}:6:" | gpg --import-ownertrust
 
   cd -
 fi

@@ -1,3 +1,5 @@
+IDENTITY=${IDENTITY:-ian@trymystery.com}
+
 use ./home
 
 use ./work/aws

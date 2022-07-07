@@ -1,6 +1,9 @@
 brew_install git
 
 copy ~/.gitconfig
+git config --global user.email "${IDENTITY}"
+GPG_SIGNING_KEY=$(op item get --fields "signing key id" "GPG Key: ${IDENTITY}")
+git config --global user.signingkey "${GPG_SIGNING_KEY}"
 
 use gh
 if ! gh auth status > /dev/null 2>&1; then

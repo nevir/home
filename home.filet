@@ -4,6 +4,10 @@ import github:dotfilet/providers
 import github:dotfilet/shell
 import github:dotfilet/utilities
 
+# Configuration
+
+IDENTITY=${IDENTITY:-ian@nevir.net}
+
 # Core
 
 use homebrew
