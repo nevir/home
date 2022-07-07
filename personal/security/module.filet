@@ -17,6 +17,7 @@ if ! gpg --list-keys | grep "${GPG_KEY_ID}" > /dev/null; then
 
   op document get --output key.gpg "GPG Key"
   gpg --import-options restore --import key.gpg
+  echo "${GPG_KEY_ID}:6:" | gpg --import-ownertrust
   rm key.gpg
 
   cd -
