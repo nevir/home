@@ -54,8 +54,8 @@ body="${message#*: }"
   -o tls=yes \
   -xu "${username}" \
   -xp "${password}" \
-  -f "Task &lt;${from}&gt;" \
-  -t "${to}" \
+  -f "Task &lt;${email}&gt;" \
+  -t "${email}" \
   -u "${subject}" \
   -m "${body}"</string>
 				<key>scriptargtype</key>
@@ -115,14 +115,8 @@ body="${message#*: }"
 	</dict>
 	<key>variables</key>
 	<dict>
-		<key>from</key>
-		<string>ian@nevir.net</string>
 		<key>server</key>
 		<string>smtp.gmail.com</string>
-		<key>to</key>
-		<string>admin@nevir.net</string>
-		<key>username</key>
-		<string>admin@nevir.net</string>
 	</dict>
 	<key>version</key>
 	<string></string>

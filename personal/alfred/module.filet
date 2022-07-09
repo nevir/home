@@ -7,6 +7,7 @@ disable_hotkey 64 32 49 1048576
 disable_hotkey 65 65535 49 1572864
 
 brew_install alfred
+brew_install sendemail
 
 set +e
 killall -m Alfred > /dev/null 2>&1
@@ -23,8 +24,14 @@ fi
 copy "${ALFRED_PREFS}" ./Alfred.alfredpreferences
 
 EMAIL_WORKFLOW="${ALFRED_PREFS}"/workflows/user.workflow.4D9E6567-9C13-4250-8FBA-833E7DC58881/info.plist
+if ! plist_has_key "${EMAIL_WORKFLOW}" variables.email; then
+  plist_set "${EMAIL_WORKFLOW}" string variables.email "${IDENTITY}"
+fi
+if ! plist_has_key "${EMAIL_WORKFLOW}" variables.username; then
+  plist_set "${EMAIL_WORKFLOW}" string variables.username $(op item get "Email Task: ${IDENTITY}" --fields username)
+fi
 if ! plist_has_key "${EMAIL_WORKFLOW}" variables.password; then
-  plist_set "${EMAIL_WORKFLOW}" string variables.password $(op item get "Email Task" --fields password)
+  plist_set "${EMAIL_WORKFLOW}" string variables.password $(op item get "Email Task: ${IDENTITY}" --fields password)
 fi
 
 open /Applications/Alfred\ 4.app
