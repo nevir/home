@@ -1,5 +1,8 @@
 {
   "breadcrumbs.enabled": false,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.inlayHints.enabled": "off",
   "editor.insertSpaces": true,
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "trailing",
@@ -13,7 +16,5 @@
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "workbench.editor.highlightModifiedTabs": true,
-  "workbench.startupEditor": "none",
-  "editor.formatOnSave": true,
-  "editor.formatOnPaste": true
+  "workbench.startupEditor": "none"
 }
