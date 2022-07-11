@@ -3,6 +3,7 @@ IDENTITY=${IDENTITY:-ian@trymystery.com}
 use ./home
 
 use ./work/aws
+use ./work/collaboration
 use ./work/volta
 use ./work/secrets
 use ./work/postgres
