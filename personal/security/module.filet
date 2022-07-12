@@ -12,8 +12,10 @@ use touchid-sudo
 
 # https://github.com/YubicoLabs/sign-git-commits-yubikey
 brew_install gpg
-copy ~/.gnupg
+
 copy ~/.zshrc.d
+copy ~/.gnupg
+chmod 700 ~/.gnupg
 
 GPG_KEY_FINGERPRINT=$(op item get --fields "fingerprint" "GPG Key: ${IDENTITY}")
 if ! gpg --list-keys | grep "${GPG_KEY_FINGERPRINT}" > /dev/null; then
