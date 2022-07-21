@@ -1,4 +1,13 @@
+use 1password
 use homebrew
 
 brew_install awscli
 brew_install aws-vpn-client
+
+copy ~/.aws
+
+cat > ~/.aws/credentials <<-end_secrets
+[default]
+aws_access_key_id = $(op item get "dev aws key" --fields label=password)
+aws_secret_access_key = $(op item get "dev aws secret" --fields label=password)
+end_secrets
