@@ -3,3 +3,7 @@ use json
 use vscode
 
 merge_json ~/"Library/Application Support/Code/User/settings.json" ./settings.json
+
+vscode_extension eamodio.gitlens
+vscode_extension GitHub.vscode-pull-request-github
+vscode_extension ms-vsliveshare.vsliveshare
