@@ -25,6 +25,8 @@ use ./personal/shell
 use ./personal/git
 use ./personal/node
 use ./personal/rust
+use ./personal/ruby
+use ./personal/python
 
 # Applications
 

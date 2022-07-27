@@ -1,0 +1,5 @@
+use homebrew
+use zsh
+
+brew_install ruby
+zsh_prepend_path /opt/homebrew/opt/ruby/bin

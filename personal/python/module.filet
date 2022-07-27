@@ -1,0 +1,5 @@
+use homebrew
+use zsh
+
+brew_install python
+zsh_prepend_path /opt/homebrew/opt/python@3.9/libexec/bin
