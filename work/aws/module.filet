@@ -6,8 +6,13 @@ brew_install aws-vpn-client
 
 copy ~/.aws
 
+if ! which aws-mfa > /dev/null; then
+  pip install aws-mfa
+fi
+
 cat > ~/.aws/credentials <<-end_secrets
-[default]
-aws_access_key_id = $(op item get "dev aws key" --fields label=password)
-aws_secret_access_key = $(op item get "dev aws secret" --fields label=password)
+[default-long-term]
+aws_access_key_id = $(op item get "dev aws credentials" --fields label=key)
+aws_secret_access_key = $(op item get "dev aws credentials" --fields label=secret)
+aws_mfa_device = $(op item get "dev aws credentials" --fields label="mfa arn")
 end_secrets
