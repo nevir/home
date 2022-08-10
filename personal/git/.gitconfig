@@ -19,3 +19,5 @@
 	lg = "log --graph --abbrev-commit --date=relative --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
 	st = "status -s"
 	pp = "!f(){ git pull; git push };f"
+[rerere]
+	enabled = true
