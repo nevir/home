@@ -5,6 +5,7 @@ brew_install awscli
 brew_install aws-vpn-client
 
 copy ~/.aws
+copy ~/bin
 
 if ! which aws-mfa > /dev/null; then
   pip install aws-mfa

@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+
+expect <<-end_expect
+spawn aws-mfa
+
+expect "Enter AWS MFA code for device*"
+send -- "$(op item get --otp --account "mystery.1password.com" "Amazon")\r"
+
+expect eof
+end_expect
