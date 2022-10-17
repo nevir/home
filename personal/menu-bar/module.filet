@@ -1,3 +1,6 @@
+# Hiding
+brew_install hiddenbar
+
 # 24 hour clock
 defaults write -g AppleICUForce24HourTime -bool true
 defaults write com.apple.menuextra.clock DateFormat "H:mm"
